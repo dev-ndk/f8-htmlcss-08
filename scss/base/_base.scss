@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+:root {
+    --Secondary-Color-Secondary-1: #1a162e;
+    --Secondary-Color-Secondary-icon: brightness(0) saturate(100%) invert(10%)
+        sepia(9%) saturate(3549%) hue-rotate(210deg) brightness(90%)
+        contrast(98%);
+}
+
 html {
     font-size: 62.5%;
 }
@@ -11,6 +18,7 @@ html {
 body {
     font-size: 1.6rem;
     font-family: "Gordita", sans-serif;
+    color: var(--Secondary-Color-Secondary-1, #1a162e);
 }
 
 a {
@@ -22,4 +30,16 @@ button {
     border: none;
     outline: none;
     background: transparent;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    color: inherit;
+}
+
+.icon {
+    filter: var(--Secondary-Color-Secondary-icon);
 }
