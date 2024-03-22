@@ -1127,6 +1127,9 @@ html.dark {
   --Secondary-Color-Secondary-1: #ffffff;
   --Secondary-Color-Secondary-4: #ededf6;
   --Secondary-Color-Secondary-shadow: rgba(0, 0, 0, 0.2);
+  --Secondary-Color-Secondary-shadow-dropdown: rgba(23, 28, 40, 0.4);
+  --icon-Color-dropdown: brightness(0) saturate(100%) invert(13%) sepia(13%)
+      saturate(1141%) hue-rotate(183deg) brightness(92%) contrast(85%);
   --Secondary-Color-Secondary-icon: brightness(0) saturate(100%) invert(100%)
       sepia(100%) saturate(1%) hue-rotate(20deg) brightness(103%)
       contrast(101%);
@@ -1139,6 +1142,9 @@ html {
   --Secondary-Color-Secondary-1: #1a162e;
   --Secondary-Color-Secondary-4: #ededf6;
   --Secondary-Color-Secondary-shadow: rgba(237, 237, 246, 0.2);
+  --Secondary-Color-Secondary-shadow-dropdown: rgba(200, 200, 200, 0.4);
+  --icon-Color-dropdown: brightness(0) saturate(100%) invert(100%) sepia(11%)
+      saturate(7500%) hue-rotate(217deg) brightness(118%) contrast(109%);
   --Secondary-Color-Secondary-icon: brightness(0) saturate(100%) invert(10%)
       sepia(9%) saturate(3549%) hue-rotate(210deg) brightness(90%)
       contrast(98%);
@@ -1162,6 +1168,7 @@ html {
 }
 
 .top-bar {
+  position: relative;
   padding: 30px 0;
 }
 @media (max-width: 575.98px) {
@@ -1197,11 +1204,20 @@ html {
     display: none;
   }
 }
-.navbar__list {
-  gap: 30px;
+.navbar__item:first-of-type .navbar__link {
+  padding-left: 0;
+}
+.navbar__item:last-of-type .navbar__link {
+  padding-right: 0;
+}
+.navbar__item:hover .dropdown {
+  visibility: visible;
+  opacity: 1;
 }
 .navbar__link {
   gap: 6px;
+  height: 50px;
+  padding: 0 15px;
   color: var(--Secondary-Color-Secondary-1, #1a162e);
   font-size: 1.5rem;
   font-weight: 500;
@@ -1296,6 +1312,30 @@ html {
   .logo__img {
     width: 24px;
   }
+}
+
+.dropdown {
+  position: absolute;
+  left: 0;
+  padding-top: 54px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.35s;
+}
+.dropdown__inner {
+  position: relative;
+  padding: 30px;
+  border-radius: 20px;
+  background: var(--Secondary-Color-Background, #fff);
+  box-shadow: 0px 40px 90px 20px var(--Secondary-Color-Secondary-shadow-dropdown);
+}
+.dropdown__inner::before {
+  content: url("../icons/dropdown-arrow.svg");
+  position: absolute;
+  top: -14px;
+  left: var(--arrow-left-pos);
+  transform: translateX(-50%);
+  filter: var(--icon-Color-dropdown);
 }
 
 /*# sourceMappingURL=main.css.map */
