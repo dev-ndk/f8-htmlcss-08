@@ -3,9 +3,6 @@ html.dark {
     --Secondary-Color-Secondary-3: #171c28;
     --Secondary-Color-Secondary-4: #ededf6;
     --Secondary-Color-Secondary-shadow: rgba(0, 0, 0, 0.2);
-    --Secondary-Color-Secondary-shadow-dropdown: rgba(23, 28, 40, 0.4);
-    --icon-Color-dropdown: brightness(0) saturate(100%) invert(13%) sepia(13%)
-        saturate(1141%) hue-rotate(183deg) brightness(92%) contrast(85%);
 
     --Secondary-Color-Secondary-icon: brightness(0) saturate(100%) invert(100%)
         sepia(100%) saturate(1%) hue-rotate(20deg) brightness(103%)
@@ -15,4 +12,12 @@ html.dark {
     --Secondary-Color-Background: #292e39;
 
     --Blue-Blue: #0071dc;
+
+    // Dropdown
+    --Secondary-Color-Secondary-shadow-dropdown: rgba(23, 28, 40, 0.4);
+    --icon-Color-dropdown: brightness(0) saturate(100%) invert(13%) sepia(13%)
+        saturate(1141%) hue-rotate(183deg) brightness(92%) contrast(85%);
+    --icon-Color-dropdown-2: brightness(0) saturate(100%) invert(86%) sepia(1%)
+        saturate(107%) hue-rotate(213deg) brightness(111%) contrast(96%);
+    --Secondary-Color-dropdown-1: #b9babe;
 }
