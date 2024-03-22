@@ -2,6 +2,7 @@
 
 html {
     --Secondary-Color-Secondary-1: #1a162e;
+    --Secondary-Color-Secondary-3: #d2d1d6;
     --Secondary-Color-Secondary-4: #ededf6;
     --Secondary-Color-Secondary-shadow: rgba(237, 237, 246, 0.2);
     --Secondary-Color-Secondary-shadow-dropdown: rgba(200, 200, 200, 0.4);
@@ -14,6 +15,8 @@ html {
     --Background-3: #eeeeee;
     --Background-2: #f6f6f6;
     --Secondary-Color-Background: #ffffff;
+
+    --Blue-Blue: #0071dc;
 
     @include abstracts.breakpoint(lg) {
         --Background-3: #fff;

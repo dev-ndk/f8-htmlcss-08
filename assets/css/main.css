@@ -1125,6 +1125,7 @@ textarea {
 }
 html.dark {
   --Secondary-Color-Secondary-1: #ffffff;
+  --Secondary-Color-Secondary-3: #171c28;
   --Secondary-Color-Secondary-4: #ededf6;
   --Secondary-Color-Secondary-shadow: rgba(0, 0, 0, 0.2);
   --Secondary-Color-Secondary-shadow-dropdown: rgba(23, 28, 40, 0.4);
@@ -1136,10 +1137,12 @@ html.dark {
   --Background-3: #171c28;
   --Background-2: #292e39;
   --Secondary-Color-Background: #292e39;
+  --Blue-Blue: #0071dc;
 }
 
 html {
   --Secondary-Color-Secondary-1: #1a162e;
+  --Secondary-Color-Secondary-3: #d2d1d6;
   --Secondary-Color-Secondary-4: #ededf6;
   --Secondary-Color-Secondary-shadow: rgba(237, 237, 246, 0.2);
   --Secondary-Color-Secondary-shadow-dropdown: rgba(200, 200, 200, 0.4);
@@ -1151,6 +1154,7 @@ html {
   --Background-3: #eeeeee;
   --Background-2: #f6f6f6;
   --Secondary-Color-Background: #ffffff;
+  --Blue-Blue: #0071dc;
 }
 @media (max-width: 991.98px) {
   html {
@@ -1316,6 +1320,7 @@ html {
 
 .dropdown {
   position: absolute;
+  width: min(1240px, 100%);
   left: 0;
   padding-top: 54px;
   visibility: hidden;
@@ -1324,6 +1329,7 @@ html {
 }
 .dropdown__inner {
   position: relative;
+  max-height: min(582px, 100vh - 158px);
   padding: 30px;
   border-radius: 20px;
   background: var(--Secondary-Color-Background, #fff);
@@ -1336,6 +1342,65 @@ html {
   left: var(--arrow-left-pos);
   transform: translateX(-50%);
   filter: var(--icon-Color-dropdown);
+}
+
+.top-menu {
+  height: 100%;
+}
+.top-menu__main {
+  width: 292px;
+  height: 100%;
+  border-right: 1px solid var(--Secondary-Color-Secondary-3, #d2d1d6);
+}
+
+.menu-column {
+  display: flex;
+  column-gap: 14px;
+}
+.menu-column__icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  position: relative;
+}
+.menu-column__icon-1 {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+.menu-column__icon-2 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+}
+.menu-column__content {
+  flex: 1;
+}
+.menu-column__heading {
+  margin-top: 6px;
+  color: var(--Secondary-Color-Secondary-1, #1a162e);
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 150%; /* 150% */
+}
+.menu-column__list {
+  margin-top: 26px;
+}
+.menu-column__link {
+  display: block;
+  margin-top: 14px;
+  color: var(--Secondary-Color-Secondary-1, #1a162e);
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 142.857%; /* 142.857% */
+  transition: 0.2s;
+}
+.menu-column__link:hover {
+  color: var(--Blue-Blue, #0071dc);
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=main.css.map */
