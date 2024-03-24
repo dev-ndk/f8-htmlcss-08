@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .dropdown {
     position: absolute;
     width: min(1240px, 100%);
@@ -44,7 +46,7 @@
     column-gap: 14px;
 
     &__item {
-        &:hover .sub-menu {
+        &--active .sub-menu {
             visibility: visible;
             opacity: 1;
         }
@@ -55,12 +57,16 @@
         width: 36px;
         height: 36px;
         position: relative;
+
+        @include abstracts.breakpoint(xl) {
+            display: none;
+        }
     }
 
     &__icon-1 {
         width: 30px;
         height: 30px;
-        object-fit: cover;
+        object-fit: contain;
     }
 
     &__icon-2 {
@@ -69,7 +75,7 @@
         bottom: 0;
         width: 24px;
         height: 24px;
-        object-fit: cover;
+        object-fit: contain;
         filter: var(--icon-Color-dropdown-2);
     }
 
@@ -78,6 +84,7 @@
     }
 
     &__heading {
+        display: block;
         margin-top: 6px;
         color: var(--Secondary-Color-dropdown-1, #1a162e);
         font-size: 1.6rem;
@@ -89,6 +96,7 @@
         margin-top: 26px;
     }
 
+    &__item--active > &__link,
     &__item:hover > &__link {
         color: var(--Blue-Blue, #0071dc);
         font-weight: 500;
