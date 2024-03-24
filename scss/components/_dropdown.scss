@@ -50,8 +50,7 @@
 
     &__item {
         &--active .sub-menu {
-            visibility: visible;
-            opacity: 1;
+            display: grid;
         }
     }
 
@@ -120,12 +119,10 @@
     position: absolute;
     inset: 0 0 0 calc(var(--main-column-width));
     padding-left: var(--inner-padding);
-    display: grid;
+    display: none;
     grid-template-columns: repeat(3, 1fr);
     column-gap: calc(var(--inner-padding) * 2);
     overflow-y: auto;
-    visibility: hidden;
-    opacity: 0;
     transition: 0.2s;
 
     &__column {
@@ -137,8 +134,7 @@
     &--not-main {
         position: initial;
         inset: initial;
-        opacity: 1;
-        visibility: visible;
+        display: grid;
         grid-template-columns: repeat(4, 1fr);
         height: var(--max-inner-height);
         padding-left: 0;
