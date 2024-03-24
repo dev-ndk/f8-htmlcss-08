@@ -32,10 +32,13 @@
 
 .top-menu {
     --main-column-width: 292px;
+    --max-inner-height: calc(
+        min(582px, 100vh - 158px) - (var(--inner-padding) * 2)
+    );
     position: relative;
     &__main {
         width: var(--main-column-width);
-        height: calc(min(582px, 100vh - 158px) - (var(--inner-padding) * 2));
+        height: var(--max-inner-height);
         border-right: 1px solid var(--Secondary-Color-Secondary-3, #d2d1d6);
         overflow-y: auto;
     }
@@ -129,5 +132,15 @@
         display: flex;
         flex-direction: column;
         row-gap: var(--inner-padding);
+    }
+
+    &--not-main {
+        position: initial;
+        inset: initial;
+        opacity: 1;
+        visibility: visible;
+        grid-template-columns: repeat(4, 1fr);
+        height: var(--max-inner-height);
+        padding-left: 0;
     }
 }
