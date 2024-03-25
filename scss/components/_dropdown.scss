@@ -168,6 +168,7 @@
         position: initial;
         display: block;
         padding-left: 0;
+        grid-template-columns: 1fr;
     }
 
     &__column {
