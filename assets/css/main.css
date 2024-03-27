@@ -1354,6 +1354,8 @@ html {
     width: 100%;
   }
   .navbar__item--active .dropdown {
+    visibility: visible;
+    opacity: 1;
     display: block;
   }
 }
