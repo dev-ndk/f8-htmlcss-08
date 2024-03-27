@@ -1617,7 +1617,6 @@ html {
 @media (max-width: 991.98px) {
   .sub-menu {
     position: initial;
-    display: block;
     padding-left: 0;
     grid-template-columns: 1fr;
   }
@@ -1634,6 +1633,12 @@ html {
   grid-template-columns: repeat(4, 1fr);
   height: var(--max-inner-height);
   padding-left: 0;
+}
+@media (max-width: 991.98px) {
+  .sub-menu--not-main {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
