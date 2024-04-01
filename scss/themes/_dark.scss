@@ -1,5 +1,6 @@
 html.dark {
     --Secondary-Color-Secondary-1: #ffffff;
+    --Secondary-Color-Secondary-2: #9e9da8;
     --Secondary-Color-Secondary-3: #171c28;
     --Secondary-Color-Secondary-4: #ededf6;
     --Secondary-Color-Secondary-shadow: rgba(0, 0, 0, 0.2);
@@ -22,4 +23,16 @@ html.dark {
 
     // Cate item
     --Background-cate-3: #171c28;
+
+    // Filter button
+    --Background-filter-3: #171c28;
+    --Secondary-Color-Secondary-filter: #ffffff;
+
+    // Like button
+
+    --Background-Like-3: #292e39;
+    --Secondary-Color-Shadow-filter: rgba(124, 124, 124, 0.2);
+
+    // Product Card
+    --Secondary-Color-Background-Product: #171c28;
 }

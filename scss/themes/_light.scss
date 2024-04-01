@@ -2,6 +2,7 @@
 
 html {
     --Secondary-Color-Secondary-1: #1a162e;
+    --Secondary-Color-Secondary-2: #9e9da8;
     --Secondary-Color-Secondary-3: #d2d1d6;
     --Secondary-Color-Secondary-4: #ededf6;
     --Secondary-Color-Secondary-shadow: rgba(237, 237, 246, 0.2);
@@ -32,4 +33,16 @@ html {
     @include abstracts.screen(md) {
         --Background-cate-3: #fff;
     }
+
+    // Filter button
+    --Background-filter-3: #fff;
+    --Secondary-Color-Secondary-filter: #6c6c72;
+
+    // Like button
+
+    --Background-Like-3: #ffffff;
+    --Secondary-Color-Shadow-filter: rgba(124, 124, 124, 0.2);
+
+    // Product Card
+    --Secondary-Color-Background-Product: #ffffff;
 }
