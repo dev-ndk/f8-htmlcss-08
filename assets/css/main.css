@@ -1221,19 +1221,19 @@ html.dark {
   --Secondary-Color-Secondary-3: #171c28;
   --Secondary-Color-Secondary-4: #ededf6;
   --Secondary-Color-Secondary-shadow: rgba(0, 0, 0, 0.2);
-  --Secondary-Color-Secondary-icon: brightness(0) saturate(100%) invert(100%)
-      sepia(100%) saturate(1%) hue-rotate(20deg) brightness(103%)
-      contrast(101%);
+  --Secondary-Color-Secondary-icon: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(1%)
+      hue-rotate(20deg) brightness(103%) contrast(101%);
   --Background-3: #171c28;
   --Background-2: #292e39;
   --Secondary-Color-Background: #292e39;
   --Blue-Blue: #0071dc;
   --Secondary-Color-Secondary-shadow-dropdown: rgba(23, 28, 40, 0.4);
-  --icon-Color-dropdown: brightness(0) saturate(100%) invert(13%) sepia(13%)
-      saturate(1141%) hue-rotate(183deg) brightness(92%) contrast(85%);
-  --icon-Color-dropdown-2: brightness(0) saturate(100%) invert(86%) sepia(1%)
-      saturate(107%) hue-rotate(213deg) brightness(111%) contrast(96%);
+  --icon-Color-dropdown: brightness(0) saturate(100%) invert(13%) sepia(13%) saturate(1141%) hue-rotate(183deg)
+      brightness(92%) contrast(85%);
+  --icon-Color-dropdown-2: brightness(0) saturate(100%) invert(86%) sepia(1%) saturate(107%) hue-rotate(213deg)
+      brightness(111%) contrast(96%);
   --Secondary-Color-dropdown-1: #b9babe;
+  --Background-cate-3: #171c28;
 }
 
 html {
@@ -1253,10 +1253,16 @@ html {
   --icon-Color-dropdown-2: brightness(0) saturate(100%) invert(5%) sepia(59%) saturate(2430%) hue-rotate(236deg)
       brightness(89%) contrast(91%);
   --Secondary-Color-dropdown-1: #1a162e;
+  --Background-cate-3: #eeeeee;
 }
 @media (max-width: 991.98px) {
   html {
     --Background-3: #fff;
+  }
+}
+@media (max-width: 767.98px) {
+  html {
+    --Background-cate-3: #fff;
   }
 }
 
@@ -1714,12 +1720,6 @@ html {
 
 .slideshow {
   position: relative;
-  margin: 40px 0;
-}
-@media (max-width: 767.98px) {
-  .slideshow {
-    margin: 30px 0;
-  }
 }
 .slideshow__inner {
   display: flex;
@@ -1802,6 +1802,110 @@ html {
 .slideshow__slider::after {
   right: 0;
   translate: 90% -50%;
+}
+
+.cate-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 16px;
+  height: 100%;
+  background: var(--Background-cate-3, #eee);
+}
+@media (max-width: 1199.98px) {
+  .cate-item {
+    flex-direction: column;
+    align-items: normal;
+  }
+}
+@media (max-width: 767.98px) {
+  .cate-item {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.cate-item__info {
+  padding-right: 21px;
+}
+@media (max-width: 1399.98px) {
+  .cate-item__info {
+    padding-right: 0;
+  }
+}
+.cate-item__thumb {
+  display: block;
+  width: 116px;
+  height: 116px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: var(--Secondary-Color-Background, #fff);
+}
+@media (max-width: 1199.98px) {
+  .cate-item__thumb {
+    width: 100%;
+    height: 150px;
+  }
+}
+@media (max-width: 767.98px) {
+  .cate-item__thumb {
+    width: 88px;
+    height: 88px;
+  }
+}
+.cate-item__title {
+  color: var(--Secondary-Color-Secondary-1, #1a162e);
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 145.455%; /* 145.455% */
+}
+@media (max-width: 767.98px) {
+  .cate-item__title {
+    font-size: 1.8rem;
+    line-height: 144.444%; /* 144.444% */
+  }
+}
+.cate-item__desc {
+  margin-top: 6px;
+  color: var(--Secondary-Color-Secondary-1, #1a162e);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%; /* 150% */
+}
+@media (max-width: 767.98px) {
+  .cate-item__desc {
+    font-size: 1.4rem;
+    line-height: 142.857%; /* 142.857% */
+  }
+}
+
+.home__container {
+  margin-top: 40px;
+}
+@media (max-width: 767.98px) {
+  .home__container {
+    margin-top: 30px;
+  }
+}
+.home__heading {
+  color: var(--Secondary-Color-Secondary-1, #1a162e);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 141.667%; /* 141.667% */
+  margin-bottom: 20px;
+}
+.home__cate {
+  --grid-gutter-x: 51px;
+}
+@media (max-width: 991.98px) {
+  .home__cate {
+    --grid-gutter-x: 24px;
+  }
+}
+@media (max-width: 767.98px) {
+  .home__cate {
+    --grid-gutter-y: 20px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -25,4 +25,11 @@ html {
     @include abstracts.screen(lg) {
         --Background-3: #fff;
     }
+
+    // Cate item
+    --Background-cate-3: #eeeeee;
+
+    @include abstracts.screen(md) {
+        --Background-cate-3: #fff;
+    }
 }
