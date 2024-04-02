@@ -2006,7 +2006,7 @@ html {
 }
 .home__cate {
   --grid-gutter-x: 51px;
-  margin-top: 0;
+  margin-top: 20px;
 }
 @media (max-width: 991.98px) {
   .home__cate {
@@ -2016,6 +2016,7 @@ html {
 @media (max-width: 767.98px) {
   .home__cate {
     --grid-gutter-y: 20px;
+    margin-top: 0;
   }
 }
 .home__row {
