@@ -75,8 +75,15 @@
             }
         }
 
+        &-select-wrap,
+        &-input {
+            border-radius: 6px;
+            border: 1px solid var(--Secondary-Color-Secondary-filter-form, #d2d1d6);
+        }
+
         &-input {
             color: var(--Secondary-Color-Secondary-1, #1a162e);
+            background: var(--Secondary-Color-Background);
             /* Medium 14 */
             font-size: 1.4rem;
             font-weight: 500;
@@ -84,13 +91,73 @@
 
             width: 121px;
             padding: 8px 12px;
+        }
+
+        &-select-wrap,
+        &-select {
+            display: flex;
+            align-items: center;
+        }
+
+        &-select-wrap {
+            padding: 5px 0;
+        }
+
+        &-select {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 4px 14px;
+            min-width: var(--select-width, 110px);
+
+            color: var(--Secondary-Color-Secondary-1, #1a162e);
+
+            /* Medium 14 */
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 142.857%; /*  */
+
+            cursor: pointer;
+        }
+
+        &-select + &-select {
+            border-left: 1px solid var(--Secondary-Color-Secondary-filter-form, #d2d1d6);
+        }
+
+        &-tags {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px 20px;
+        }
+
+        &-tag {
+            padding: 6px 12px;
             border-radius: 6px;
-            border: 1px solid var(--Secondary-Color-Secondary-filter-form, #d2d1d6);
+            background: var(--Secondary-Color-Secondary-5, #f8f8fb);
+
+            color: var(--Secondary-Color-Secondary-2, #9e9da8);
+
+            /* Medium 14 */
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 142.857%; /* 142.857% */
+            transition: color 0.2s;
+
+            &:hover {
+                color: var(--Secondary-Color-Secondary-1, #1a162e);
+            }
         }
     }
 
     &__row {
         display: flex;
-        flex: 1;
+    }
+
+    &__separate {
+        width: 1px;
+        margin: 0 30px;
+        background: #eee;
     }
 }
