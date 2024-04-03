@@ -39,3 +39,52 @@
         margin-top: 9px;
     }
 }
+
+// Buttons
+.btn {
+    color: var(--Secondary-Color-Secondary-1, #1a162e);
+    background: #f8f8fb;
+
+    /* Medium 18 */
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 46px; /* 144.444% */
+    border-radius: 6px;
+    padding: 0 20px;
+    transition: 0.2s;
+    user-select: none;
+
+    + .btn {
+        margin-left: 20px;
+    }
+
+    &--text {
+        background: transparent;
+        color: var(--Secondary-Color-Secondary-2, #9e9da8);
+        /* Regular 15 */
+        font-weight: 400;
+    }
+
+    &--primary {
+        background: var(--Yellow-Yellow, #ffb700);
+    }
+
+    &--outline {
+        background: transparent;
+        border: 1px solid var(--Secondary-Color-btn-outline, #d2d1d6);
+    }
+
+    &--rounded {
+        border-radius: 999px;
+    }
+
+    &[disabled],
+    &--disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &:hover {
+        opacity: 0.9;
+    }
+}

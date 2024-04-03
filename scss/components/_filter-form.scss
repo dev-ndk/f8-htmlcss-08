@@ -6,11 +6,18 @@
 .filter {
     position: absolute;
     right: 0;
-    top: 50px;
+    top: 55px;
     border-radius: 20px;
     padding: 30px;
     background: var(--Secondary-Color-Background);
     box-shadow: 0px 40px 90px var(--Secondary-Color-Shadow-filter-form);
+
+    &__arrow {
+        position: absolute;
+        top: -15px;
+        right: 24px;
+        height: 20.5px;
+    }
 
     &__heading {
         color: var(--Secondary-Color-Secondary-1, #1a162e);
@@ -181,9 +188,29 @@
         display: flex;
     }
 
+    &__footer {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 32px;
+    }
+
     &__separate {
         width: 1px;
         margin: 0 30px;
         background: #eee;
+    }
+
+    &__cancel,
+    &__submit {
+        line-height: 38px;
+        padding: 0 10px;
+    }
+
+    &__cancel {
+        font-size: 1.5rem;
+    }
+
+    &__submit {
+        font-size: 1.4rem;
     }
 }
