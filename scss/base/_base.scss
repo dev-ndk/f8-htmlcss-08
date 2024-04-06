@@ -6,15 +6,19 @@
     box-sizing: border-box;
 }
 
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
 html {
     font-size: 62.5%;
 }
 
 body {
     font-size: 1.6rem;
-    font-family: "Gordita", sans-serif;
-    color: var(--Secondary-Color-Secondary-1, #1a162e);
-    background: var(--Background-2, #f6f6f6);
+    font-family: Lato, sans-serif;
+    color: var(--text-color);
+    background: var(--body-bg);
 }
 
 a {
@@ -26,6 +30,7 @@ button {
     border: none;
     outline: none;
     background: transparent;
+    padding: 0;
     cursor: pointer;
 }
 
@@ -33,18 +38,32 @@ a,
 img,
 button,
 input,
-select,
-textarea {
+label,
+textarea,
+select {
     padding: 0;
-    outline: none;
-    border: none;
     font-family: inherit;
     color: inherit;
-    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    border: none;
+}
+
+input,
+textarea {
+    background: transparent;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+input:-webkit-autofill:hover {
+    transition: background-color 1s 9999s;
+    -webkit-text-fill-color: var(--text-color);
+    caret-color: var(--text-color);
 }
 
 .icon {
-    filter: var(--Secondary-Color-Secondary-icon);
+    filter: var(--icon-color);
 }
 
 .container {
@@ -52,4 +71,20 @@ textarea {
         padding-left: 20px !important;
         padding-right: 20px !important;
     }
+}
+
+i,
+em {
+    font-style: italic;
+}
+
+b,
+strong {
+    font-weight: 600;
+}
+
+.separate {
+    margin: var(--margin) 0;
+    height: 1px;
+    background: var(--separate-color);
 }
